@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
 import Main from './containers/main/Main';
-
 import './App.css';
-
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { ApolloProvider } from '@apollo/react-hooks';
+import { client } from './data/api';
 
 /**
  * Global application theme.
@@ -25,7 +24,9 @@ export default class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Main />
+        <ApolloProvider client={client}>
+          <Main />
+        </ApolloProvider>
       </ThemeProvider>
     );
   }

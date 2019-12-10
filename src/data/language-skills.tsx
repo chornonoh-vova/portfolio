@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faHtml5, faCss3Alt, faJs, faReact, faNode, faPython, faDocker, faJava, faAndroid, faAngular } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faReact, faNode, faPython, faDocker, faJava, faAndroid, faAngular, faLinux } from '@fortawesome/free-brands-svg-icons';
 
 interface Skill {
   name: string;
@@ -9,6 +9,10 @@ interface Skill {
 }
 
 const languageSkills: Skill[] = [
+  {
+    name: 'Linux',
+    icon: <FontAwesomeIcon icon={faLinux} />,
+  },
   {
     name: 'HTML5',
     icon: <FontAwesomeIcon icon={faHtml5} />,

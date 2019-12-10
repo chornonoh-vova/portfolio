@@ -11,6 +11,5 @@ it('Renders App component only with Main container inside', () => {
 
   const component = renderer.getRenderOutput();
 
-  expect(component.type).toEqual('ThemeProvider');
   expect(component.props.children).toEqual(<Main />);
 });
